@@ -21,7 +21,7 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
 
       .attribution {
         font-size: 11px;
@@ -50,8 +50,7 @@
         border: none;
         color: var(--dark-grayish-blue);
       }
-      body
-      {
+      body {
         background-color: var(--very-light-grayish-blue);
       }
       .container {
@@ -59,32 +58,34 @@
         width: 50vw;
         margin-top: 3rem;
       }
-      .title
-      {
+      .title {
         display: flex;
-        flex-direction:row;
+        flex-direction: row;
         align-items: flex-start;
         padding: 0.5rem;
         background-color: var(--white);
         margin: 0.5rem 1rem;
         font-weight: 800;
-
       }
-      .title>span:first-child
-      {
+      .title > span:first-child {
         font-size: 1.5rem;
-        color:var(--very-dark-blue);
+        color: var(--very-dark-blue);
       }
-      .count
-      {
+      .all-read {
+        color: var(--grayish-blue);
+        cursor: pointer;
+      }
+      .all-read:hover {
+        color: var(--blue);
+      }
+      .count {
         background-color: var(--blue);
         color: var(--white);
-        padding:0.25rem 0.6rem;
+        padding: 0.25rem 0.6rem;
         margin: 0 0.5rem;
         border-radius: 0.3rem;
       }
-      .notification.not-read
-      {
+      .notification.not-read {
         background-color: var(--very-light-grayish-blue);
       }
       .notification {
@@ -107,7 +108,7 @@
       }
       .n-time {
         margin: 0;
-        color:var(--grayish-blue);
+        color: var(--grayish-blue);
       }
       .n-avatar {
         margin: 0 1rem 0 0.5rem;
@@ -121,32 +122,28 @@
         margin-left: 2.5rem;
         border-radius: 0.5rem;
       }
-      .n-img:hover{
+      .n-img:hover {
         border: 2px solid var(--light-grayish-blue-1);
-      } 
+      }
       .n-user {
-        color:var(--very-dark-blue);
+        color: var(--very-dark-blue);
         font-weight: bolder;
         cursor: pointer;
       }
-      .n-user:hover
-      {
+      .n-user:hover {
         color: var(--blue);
       }
       .n-event {
         font-weight: bold;
         cursor: pointer;
       }
-      .n-event.event-b
-      {
+      .n-event.event-b {
         color: var(--blue);
       }
-      .n-event.event-g
-      {
+      .n-event.event-g {
         color: var(--dark-grayish-blue);
       }
-      .n-event:hover
-      {
+      .n-event:hover {
         color: var(--blue);
       }
       .notification .message-sent {
@@ -156,27 +153,22 @@
         margin: 0.25rem 0;
         cursor: pointer;
       }
-      .notification .message-sent:hover
-      {
+      .notification .message-sent:hover {
         background-color: var(--light-grayish-blue-1);
       }
-      @media (max-width:768px) {
-        .container
-        {
+      @media (max-width: 768px) {
+        .container {
           width: 100vw;
           margin-top: 0.5rem;
         }
-        .notification-container
-        {
+        .notification-container {
           width: 100%;
         }
-        .n-img
-        {
+        .n-img {
           margin-left: 0;
         }
-        .notification
-        {
-          margin-left:0 ;
+        .notification {
+          margin-left: 0;
           margin-right: 0;
         }
       }
@@ -184,9 +176,13 @@
   </head>
   <body>
     <div class="container d-flex flex-column">
-      <div class="header d-flex flex-row justify-content-between align-items-end">
-        <p class="title" style="color:var(--very-dark-blue) ;"><span>Notifications</span><span class="count" id="count">3</span></p>
-        <p class="all-read" style="color:var(--grayish-blue)" onclick="markRead();">Mark all as read</p>
+      <div
+        class="header d-flex flex-row justify-content-between align-items-end"
+      >
+        <p class="title" style="color: var(--very-dark-blue)">
+          <span>Notifications</span><span class="count" id="count">3</span>
+        </p>
+        <p class="all-read" onclick="markRead();">Mark all as read</p>
       </div>
       <div class="notification-container">
         <div class="notification not-read d-flex flex-row align-items-start">
@@ -199,7 +195,7 @@
             <p class="n-message">
               <span class="n-user">Mark Webber</span>
               reacted to your recent post
-              <span class="n-event event-g" >My first tournament today!</span>
+              <span class="n-event event-g">My first tournament today!</span>
             </p>
             <p class="n-time">1m ago</p>
           </div>
@@ -228,7 +224,7 @@
             <p class="n-message">
               <span class="n-user">Jacob Thompson</span>
               has joined your group
-              <span class="n-event event-b" >Chess Club</span>
+              <span class="n-event event-b">Chess Club</span>
             </p>
             <p class="n-time">1 day ago</p>
           </div>
@@ -252,14 +248,16 @@
             </div>
           </div>
         </div>
-        <div class="notification d-flex flex-row align-items-start justify-content-between">
+        <div
+          class="notification d-flex flex-row align-items-start justify-content-between"
+        >
           <img
             src="./assets/images/avatar-kimberly-smith.webp"
             alt="avatar"
-            class=" n-avatar"
+            class="n-avatar"
           />
           <div
-          style="width: 100%;"
+            style="width: 100%"
             class="n-content d-flex flex-column justify-content-center"
           >
             <p class="n-message">
@@ -271,7 +269,7 @@
           <img
             src="./assets/images/image-chess.webp"
             alt="avatar"
-            class="n-img "
+            class="n-img"
           />
         </div>
         <div class="notification d-flex flex-row align-items-start">
@@ -286,7 +284,7 @@
             <p class="n-message">
               <span class="n-user">Nathan Peterson</span>
               reacted to your recent post
-              <span class="n-event event-g" 
+              <span class="n-event event-g"
                 >5 end-game strategies to increase your win rate</span
               >
             </p>
@@ -305,7 +303,7 @@
             <p class="n-message">
               <span class="n-user">Anna Kim</span>
               left the group
-              <span class="n-event event-b" >Chess Club</span>
+              <span class="n-event event-b">Chess Club</span>
             </p>
             <p class="n-time">2 weeks ago</p>
           </div>
@@ -316,15 +314,20 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="https://www.linkedin.com/in/angel-francis-267906171/">Angel Francis</a>.
+      >. Coded by
+      <a href="https://www.linkedin.com/in/angel-francis-267906171/"
+        >Angel Francis</a
+      >.
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-      const markRead=()=>
-      {
-        $(".not-read").attr("class","notification d-flex flex-row align-items-start")
-        $("#count").text("0")
-      }
+      const markRead = () => {
+        $(".not-read").attr(
+          "class",
+          "notification d-flex flex-row align-items-start"
+        );
+        $("#count").text("0");
+      };
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
