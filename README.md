@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/AngelFrancis/Notifications-page)
-- Live Site URL: [Add live site URL here](https://AngelFrancis.github.io//Notifications-page)
+- [Solution URL](https://github.com/AngelFrancis/Notifications-page)
+- [Live Site URL](https://angelfrancis.github.io/Notifications-page/)
 
 ### Built with
 
